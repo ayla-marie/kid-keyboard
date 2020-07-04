@@ -138,6 +138,31 @@ function turnKeysOn(array) {
   }
 }
 
+//hide letters by group
+function turnKeysOff(array) {
+  const hideKey = virtualKeys => {
+    const virtualKeyEl = row[virtualKeys[0]].children[virtualKeys[1]];
+
+    virtualKeyEl.className = "key-off";
+  };
+  var i;
+  for (i = 0; i < array.length; i++) {
+    hideKey(array[i]);
+  }
+}
+//set letters to default by group
+function setKeystoDefault(array) {
+  const defaultKey = virtualKeys => {
+    const virtualKeyEl = row[virtualKeys[0]].children[virtualKeys[1]];
+
+    virtualKeyEl.className = "key";
+  };
+  var i;
+  for (i = 0; i < array.length; i++) {
+    defaultKey(array[i]);
+  }
+}
+
 //for loop that iterates through the whole class of "key"
 var i;
 for (i = 0; i < virtualKeys.length; i++) {
@@ -157,33 +182,6 @@ for (i = 0; i < virtualKeys.length; i++) {
     toggleAppendText();
   });
 }
-
-//hide letters by group
-function turnKeysOff(array) {
-  const hideKey = virtualKeys => {
-    const virtualKeyEl = row[virtualKeys[0]].children[virtualKeys[1]];
-
-    virtualKeyEl.className = "key-off";
-  };
-  var i;
-  for (i = 0; i < array.length; i++) {
-    hideKey(array[i]);
-  }
-}
-function setKeystoDefault(array) {
-  const defaultKey = virtualKeys => {
-    const virtualKeyEl = row[virtualKeys[0]].children[virtualKeys[1]];
-
-    virtualKeyEl.className = "key";
-    virtualKeyEl.addEventListener("click", () =>
-      textField.append(virtualKeyEl.value)
-    );
-  };
-  var i;
-  for (i = 0; i < array.length; i++) {
-    defaultKey(array[i]);
-  }
-}
 //level button color border functions
 function turnOnRed() {
   red.className = "levels-select";
@@ -200,6 +198,7 @@ function turnOnGreen() {
   yellow.className = "levels";
   green.className = "levels-select";
 }
+function LimitInputRed() {}
 
 //event listeners for turing on/off groups
 red.addEventListener("click", () => {
@@ -207,6 +206,7 @@ red.addEventListener("click", () => {
   turnKeysOff(group2);
   turnKeysOff(group3);
   turnOnRed();
+  LimitInputRed();
 });
 
 yellow.addEventListener("click", () => {
