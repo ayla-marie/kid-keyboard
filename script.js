@@ -184,23 +184,42 @@ function setKeystoDefault(array) {
     defaultKey(array[i]);
   }
 }
+//level button color border functions
+function turnOnRed() {
+  red.className = "levels-select";
+  yellow.className = "levels";
+  green.className = "levles";
+}
+function turnOnYellow() {
+  red.className = "levels";
+  yellow.className = "levels-select";
+  green.className = "levles";
+}
+function turnOnGreen() {
+  red.className = "levels";
+  yellow.className = "levels";
+  green.className = "levels-select";
+}
 
 //event listeners for turing on/off groups
 red.addEventListener("click", () => {
   turnKeysOn(group1);
   turnKeysOff(group2);
   turnKeysOff(group3);
+  turnOnRed();
 });
 
 yellow.addEventListener("click", () => {
   setKeystoDefault(group1);
   turnKeysOn(group2);
   turnKeysOff(group3);
+  turnOnYellow();
 });
 green.addEventListener("click", () => {
   setKeystoDefault(group1);
   setKeystoDefault(group2);
   turnKeysOn(group3);
+  turnOnGreen();
 });
 //shift function
 
