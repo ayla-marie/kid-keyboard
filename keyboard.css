@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e0e2dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+textarea {
+  width: 500px;
+  margin-right: 40px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
+.key {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  min-width: 35px;
+  margin: 0;
+}
+.key-on {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  border-color: greenyellow;
+  border-width: 4px;
+  min-width: 35px;
+  margin: 0;
+}
+.key-off {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: #383636;
+  font-size: 14px;
+  border-radius: 5px;
+  min-width: 35px;
+  margin: 0;
+}
+.row {
+  padding-bottom: 2px;
+  padding-right: 2px;
+  padding-top: 0px;
+  padding-left: 0px;
+}
+.levels button {
+  font-family: "Quicksand", sans-serif;
+  border-radius: 20px;
+  height: 40px;
+  width: 100px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+#space {
+  width: 300px;
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#shift2 {
+  width: 70px;
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#enter {
+  width: 90px;
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#shift {
+  width: 60px;
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#go {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: lightgreen;
+  font-size: 14px;
+  border-radius: 5px;
+  min-width: 35px;
+  margin: 0;
+}
+#tab {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#lock {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#delete {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.gen {
+  height: 70%;
+}
+.controls {
+  display: flex;
+  flex-direction: row;
+}
+.levels {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.keyboard {
+  max-height: 30%;
+}
+
+textarea {
+  font-family: "Bree Serif", sans-serif;
+  font-size: 26px;
+}
+
+.frm {
+  width: 50px;
+  height: 20px;
+  font-size: 12px;
+  background-color: lightgreen;
+}
+#activity {
+  height: 50px;
+  width: 500px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  color: black;
+  background-color: white;
+  display: flex;
+}
+div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
+  content: attr(data-placeholder);
+  float: left;
+  margin-left: 2px;
+  color: #b3b3b3;
+}
