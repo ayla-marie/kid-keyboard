@@ -1,7 +1,6 @@
 const textField = document.getElementById("activity");
 const spacebar = document.getElementById("space");
-const shiftRight = document.querySelector("shift");
-const shiftLeft = document.getElementById("shift2");
+const shift = document.getElementsByClassName("shift");
 const virtualkey = document.querySelector("button");
 const del = document.getElementById("delete");
 const ent = document.getElementById("enter");
@@ -9,7 +8,7 @@ const row = document.getElementsByClassName("row");
 const lockKey = document.getElementById("lock");
 const apostraphe = document.getElementById("apostraphe");
 const quotes = document.getElementById("quotes");
-const gobtn = document.getElementById("go");
+const clearbtn = document.getElementById("clear");
 const leftArrow = document.getElementById("leftArrow");
 const RightArrow = document.getElementById("RightArrow");
 const virtualKeys = document.getElementsByClassName("key");
@@ -198,7 +197,6 @@ function turnOnGreen() {
   yellow.className = "levels";
   green.className = "levels-select";
 }
-function LimitInputRed() {}
 
 //event listeners for turing on/off groups
 red.addEventListener("click", () => {
@@ -206,7 +204,7 @@ red.addEventListener("click", () => {
   turnKeysOff(group2);
   turnKeysOff(group3);
   turnOnRed();
-  LimitInputRed();
+  LimitInput();
 });
 
 yellow.addEventListener("click", () => {
@@ -221,25 +219,74 @@ green.addEventListener("click", () => {
   turnKeysOn(group3);
   turnOnGreen();
 });
-//shift function
 
 //spacebar function
 spacebar.addEventListener("click", () => {
   textField.append(" ");
 });
+//shift function
+var i;
+for (i = 0; i < shift.length; i++) {
+  shiftEl = shift[i];
+  shiftEl.addEventListener("click", () => {
+    if (shiftEl.className === "shift") {
+      shiftEl.className = "shift-on";
+    } else {
+      shiftEl.className = "shift";
+    }
+    var a;
+    for (a = 0; a < virtualKeys.length; a++) {
+      keyEl = virtualKeys[a];
+      if (shiftEl.className === "shift-on") {
+        keyEl.value = keyEl.value.toUpperCase();
+        keyEl.innerText = keyEl.innerText.toUpperCase();
+      } else {
+        keyEl.value = keyEl.value.toLowerCase();
+        keyEl.innerText = keyEl.innerText.toLowerCase();
+      }
+    }
+  });
+}
+
+//lock function
+lockKey.addEventListener("click", () => {
+  if (lockKey.className === "lock") {
+    lockKey.className = "lock-on";
+  } else {
+    lockKey.className = "lock";
+  }
+  var a;
+  for (a = 0; a < virtualKeys.length; a++) {
+    keyEl = virtualKeys[a];
+    if (lockKey.className === "lock-on") {
+      keyEl.value = keyEl.value.toUpperCase();
+      keyEl.innerText = keyEl.innerText.toUpperCase();
+    } else {
+      keyEl.value = keyEl.value.toLowerCase();
+      keyEl.innerText = keyEl.innerText.toLowerCase();
+    }
+  }
+});
+
 //delete function
-del.addEventListener("click", () => {});
+del.addEventListener("click", () => {
+  textField.innerText = textField.innerText.substring(
+    0,
+    textField.innerText.length - 1
+  );
+});
+
+//clear button
+clearbtn.addEventListener("click", () => {
+  textField.innerText = "";
+});
 
 //enter function
-ent.addEventListener("click", () => {
-  textField.append();
-});
 
 //tab function
-tab.addEventListener("click", () => {
-  event.keyCode = 9;
-});
 
 //arrow left function
 
 //arrow right function
+
+//coursework screen

@@ -50,6 +50,16 @@ textarea {
   min-width: 35px;
   margin: 0;
 }
+.oth {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  min-width: 35px;
+  margin: 0;
+}
 .row {
   padding-bottom: 2px;
   padding-right: 2px;
@@ -73,15 +83,7 @@ textarea {
   font-size: 14px;
   border-radius: 5px;
 }
-#shift2 {
-  width: 70px;
-  height: 40px;
-  font-family: "Quicksand", sans-serif;
-  background-color: #383636;
-  color: white;
-  font-size: 14px;
-  border-radius: 5px;
-}
+
 #enter {
   width: 90px;
   height: 40px;
@@ -91,8 +93,8 @@ textarea {
   font-size: 14px;
   border-radius: 5px;
 }
-#shift {
-  width: 60px;
+.shift {
+  width: 65px;
   height: 40px;
   font-family: "Quicksand", sans-serif;
   background-color: #383636;
@@ -100,14 +102,25 @@ textarea {
   font-size: 14px;
   border-radius: 5px;
 }
-#go {
+.shift-on {
+  width: 65px;
   height: 40px;
   font-family: "Quicksand", sans-serif;
   background-color: #383636;
-  color: lightgreen;
+  color: lightseagreen;
   font-size: 14px;
   border-radius: 5px;
-  min-width: 35px;
+  border-color: lightseagreen;
+  border-width: 4px;
+}
+#clear {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: orangered;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 40px;
   margin: 0;
 }
 #tab {
@@ -118,13 +131,23 @@ textarea {
   font-size: 14px;
   border-radius: 5px;
 }
-#lock {
+.lock {
   height: 40px;
   font-family: "Quicksand", sans-serif;
   background-color: #383636;
   color: white;
   font-size: 14px;
   border-radius: 5px;
+}
+.lock-on {
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #383636;
+  color: orangered;
+  font-size: 14px;
+  border-radius: 5px;
+  border-color: orangered;
+  border-width: 2px;
 }
 #delete {
   height: 40px;
@@ -169,7 +192,6 @@ textarea {
   font-size: 22px;
   color: black;
   background-color: white;
-  display: flex;
 }
 div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
   content: attr(data-placeholder);
@@ -185,4 +207,8 @@ div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
   width: 100px;
   margin-bottom: 20px;
   font-size: 16px;
+}
+.coursework {
+  min-width: 650px;
+  min-height: 400px;
 }

@@ -12,13 +12,17 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="gen"></div>
+    <div class="coursework">
+
+    </div>
+    <button id="home">Home</button>
+
     
     <form>
         <div id="activity" 
-       data-placeholder="click here to type" contenteditable="true">
+       data-placeholder="click here to type" contenteditable="true"> 
         </div>
-      <button id="submit">submit</button>
+      <button id="submit">Next</button>
     </form>
    
     <div class="controls">
@@ -54,7 +58,7 @@
           <button id="enter">Enter</button>
       </div>
       <div class="row">
-        <button id="lock">Lock</button>
+        <button id="lock" class="lock">Lock</button>
         <button class="key"value="a">a</button>
         <button class="key"value="s">s</button>
         <button class="key"value="d">d</button>
@@ -66,11 +70,14 @@
         <button class="key"value="l">l</button>
         <button class="key"id="quotes">"</button>
         <button class="key"id="apostraphe">'</button>
-        <button id="go">Go</button>
+        <button id="clear">
+          <i class="fa fa-times" aria-hidden="true"></i>
+
+        </button>
       </div>
 
       <div class="row">
-          <button id="shift2">shift</button>
+          <button id="leftsh" class="shift">shift</button>
         <button class="key"value="z">z</button>
         <button class="key"value="x">x</button>
         <button class="key"value="c">c</button>
@@ -82,12 +89,12 @@
          ,</button>
         <button class="key" value=".">.</button>
         <button class="key" value="?">?</button>
-        <button id="shift">shift</button>
+        <button id="rightsh" class="shift">shift</button>
       </div>
 
       <div class="row">
-        <button class="key"><br />ctrl</button>
-        <button class="key"><br />option</button>
+        <button class="oth"><br />ctrl</button>
+        <button class="oth"><br />option</button>
         <button id="space" value=" "><br />space</button>
         <button id="leftArrow"><br />
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
